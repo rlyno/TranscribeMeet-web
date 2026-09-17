@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TranscribeMeet</title>
+<meta name="description" content="Turn a meeting recording into a timestamped transcript inside your browser. The Whisper model downloads to your device; the recording is never uploaded anywhere.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+<meta property="og:title" content="TranscribeMeet — meeting transcripts in your browser">
+<meta property="og:description" content="Timestamped transcripts without uploading the recording. Everything runs on your own device.">
+<meta property="og:type" content="website">
+</head>
+<body>
+<header>
+  <h1><span class="dot"></span>TranscribeMeet</h1>
+  <span class="tagline" id="tagline"></span>
+  <div class="right" id="headerChips"></div>
+</header>
+
+<main>
+  <aside>
+    <section class="card">
+      <h2 id="machineTitle"></h2>
+      <div class="body" id="machine"></div>
+    </section>
+    <section class="card">
+      <h2><span id="queueTitleText"></span> <span id="jobCount" class="badge hidden">0</span></h2>
+      <div id="jobs"></div>
+      <div class="body" id="addWrap"></div>
+    </section>
+  </aside>
+
+  <div class="detail" id="detail"></div>
+</main>
+
+<footer>
+  <span id="footerA"></span>
+  <br>
+  <span id="footerB"></span><a href="https://github.com/epamemo/TranscribeMeet" rel="noopener" id="footerLink"></a>.
+</footer>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
